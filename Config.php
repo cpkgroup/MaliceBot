@@ -19,8 +19,8 @@ class Config
         'telegram' => [
             'APIKey' => '186776486:AAFcV8suIl_XxQB9cegTQnUmzlCvAg43RBk',
             'botName' => 'LooyanBot',
-            'hookUrl' => 'https://telegram.sheypoor.com/e952252db0e07b857256b4d90be0e3b12d065f27.php',
-            'certificatePath' => '',
+            'hookUrl' => 'https://yandexian.herokuapp.com/public/hookz.php',
+            'certificatePath' => null,
             'certificatePath2' => '../certificate.key',
             'commandsPath' => '../Commands/',
             'logPath' => '../log',
