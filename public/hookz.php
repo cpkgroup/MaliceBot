@@ -41,7 +41,7 @@ try {
     // Handle telegram webhook request
     $update = $telegram->handle();
 } catch (Longman\TelegramBot\Exception\TelegramException $e) {
-    file_put_contents('aaa.txt', $e->getMessage());
+    file_put_contents('aaa2.txt', $e->getMessage());
     throw $e;
     \Longman\TelegramBot\TelegramLog::error($e->getMessage());
 }
