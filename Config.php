@@ -17,8 +17,8 @@ class Config
 
     private static $production = [
         'telegram' => [
-            'APIKey' => '399083360:AAEhGOk82RFf-DKT9DSpUuUVcPnIhGZ6Pq4',
-            'botName' => 'dayooooooos_bot',
+            'APIKey' => '365544425:AAEfYIoTV4QK2coF8RXZTs7G21-68Y3CjuM',
+            'botName' => 'dayooooooosBot',
             'hookUrl' => 'https://yandexian.herokuapp.com/public/hookz.php',
             'certificatePath' => null,
             'commandsPath' => '../Commands/',
@@ -36,7 +36,7 @@ class Config
         'telegram' => [
             'APIKey' => '186776486:AAFcV8suIl_XxQB9cegTQnUmzlCvAg43RBk',
             'botName' => 'LooyanBot',
-            'hookUrl' => 'https://5809586c.ngrok.io/public/hookz.php',
+            'hookUrl' => 'https://400e49df.ngrok.io/public/hookz.php',
             'certificatePath' => null,
             'commandsPath' => '../Commands/',
             'logPath' => '../log',
