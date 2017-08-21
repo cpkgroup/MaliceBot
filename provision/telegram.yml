@@ -1,9 +1,0 @@
----
-- hosts: all
-  su: no
-  roles:
-    - base
-    - nginx
-    - php
-    - mysql
-    - redis
