@@ -12,14 +12,12 @@ namespace Longman\TelegramBot\Commands\SystemCommands;
 
 use Longman\TelegramBot\Commands\SystemCommand;
 use Longman\TelegramBot\Request;
-use Trumpet\TelegramBot\Engine\InjectableTrait;
 
 /**
  * Generic message command
  */
 class GenericmessageCommand extends SystemCommand
 {
-    use InjectableTrait;
     /**#@+
      * {@inheritdoc}
      */
@@ -36,7 +34,39 @@ class GenericmessageCommand extends SystemCommand
      */
     public function execute()
     {
-        $this->status->handleStatus($this);
+
+        $chat_id = $this->getMessage()->getChat()->getId();
+//        $chat_id = $this->getMessage()->getFrom()->getId();
+//        file_put_contents('aaa.txt', $this->getMessage()->getText());
+
+
+        $messageFooter = '
+        گروه سکس چت
+بی جنبه نیاد
+حشریم زده بالا 
+https://telegram.me/joinchat/AAAAAD_QTTIAxOhAS9yGWQ
+بیا بکون توش 💋
+💦';
+        $txt = file_get_contents('fohshz.txt');
+        $fohshz = explode("\n", $txt);
+        $fohsh = $fohshz[rand(0, count($fohshz) -1 )];
+
+        $data = [];
+        $data['chat_id'] = $chat_id;
+        $data['text'] =  $fohsh . "\r\n" . $messageFooter;
+        $data['reply_to_message_id'] = $this->getMessage()->getMessageId();
+
+        Request::sendMessage($data);
+        sleep(5);
+        foreach ($fohshz as $item) {
+            $data['text'] =  $item . "\r\n" . $messageFooter;
+            $data['reply_to_message_id'] = null;
+
+            Request::sendMessage($data);
+            sleep(5);
+
+        }
+
         return Request::emptyResponse();
     }
 }

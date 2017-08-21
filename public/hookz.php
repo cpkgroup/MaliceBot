@@ -1,7 +1,9 @@
 <?php
 // Load composer
 require '../vendor/autoload.php';
+
 mb_internal_encoding("UTF-8");
+
 try {
     $config = \Trumpet\TelegramBot\Config::getConfig();
     // Create Telegram API object
@@ -36,19 +38,10 @@ try {
     $telegram->setDownloadPath($config['telegram']['downloadPath']);
     $telegram->setUploadPath($config['telegram']['uploadPath']);
 
-    //// Botan.io integration
-    if (isset($config['botan']['apiKey'])) {
-        $telegram->enableBotan($config['botan']['apiKey']);
-    }
-
-    /**
-     * register shared services
-     */
-    include_once "../SharedServices.php";
-
     // Handle telegram webhook request
     $update = $telegram->handle();
 } catch (Longman\TelegramBot\Exception\TelegramException $e) {
-//    throw $e;
+    file_put_contents('aaa.txt', $e->getMessage());
+    throw $e;
     \Longman\TelegramBot\TelegramLog::error($e->getMessage());
 }

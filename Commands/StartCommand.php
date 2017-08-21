@@ -11,16 +11,13 @@
 namespace Longman\TelegramBot\Commands\SystemCommands;
 
 use Longman\TelegramBot\Commands\SystemCommand;
-use Trumpet\TelegramBot\Commands\Constants\StatusList;
-use Trumpet\TelegramBot\Engine\InjectableTrait;
-use Trumpet\TelegramBot\Services\MessageDirector;
+use Longman\TelegramBot\Request;
 
 /**
  * Start command
  */
 class StartCommand extends SystemCommand
 {
-    use InjectableTrait;
     /**#@+
      * {@inheritdoc}
      */
@@ -33,10 +30,8 @@ class StartCommand extends SystemCommand
     /**
      * {@inheritdoc}
      */
-    public function execute($id = null)
+    public function execute()
     {
-        $message = MessageDirector::build($this);
-        $message->setText(null);
-        return $this->messageHelper->executeSection(StatusList::START, $message);
+        return Request::emptyResponse();
     }
 }

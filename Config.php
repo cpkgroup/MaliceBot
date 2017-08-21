@@ -53,7 +53,7 @@ class Config
         'telegram' => [
             'APIKey' => '186776486:AAFcV8suIl_XxQB9cegTQnUmzlCvAg43RBk',
             'botName' => 'LooyanBot',
-            'hookUrl' => 'https://263f002d.ngrok.io/telegram_bot/public/e952252db0e07b857256b4d90be0e3b12d065f27.php',
+            'hookUrl' => 'https://77af899a.ngrok.io/public/hookz.php',
             'certificatePath' => null,
             'commandsPath' => '../Commands/',
             'logPath' => '../log',
@@ -62,8 +62,9 @@ class Config
             'culturePath' => '../locale',
             'locale' => 'fa'
         ],
-        'mysql' => [
-            'host' => '192.168.50.4',
+        'mysql' => '',
+        'mysql1' => [
+            'host' => '127.0.0.1',
             'user' => 'root',
             'password' => '',
             'database' => 'telegram'
@@ -76,9 +77,6 @@ class Config
         'throttle' => [
             'timeLimit' => 3,
             'counterLimit' => 3
-        ],
-        'botan' => [
-            'apiKey' => 'oUcWTHCcDj1xqa:z9hWjNI0rdm_cHhms'
         ]
     ];
 }

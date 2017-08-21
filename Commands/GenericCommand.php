@@ -12,14 +12,12 @@ namespace Longman\TelegramBot\Commands\SystemCommands;
 
 use Longman\TelegramBot\Commands\SystemCommand;
 use Longman\TelegramBot\Request;
-use Trumpet\TelegramBot\Engine\InjectableTrait;
 
 /**
  * Generic command
  */
 class GenericCommand extends SystemCommand
 {
-    use InjectableTrait;
     /**#@+
      * {@inheritdoc}
      */
@@ -33,7 +31,6 @@ class GenericCommand extends SystemCommand
      */
     public function execute()
     {
-        $this->status->handleStatus($this);
         return Request::emptyResponse();
     }
 }
