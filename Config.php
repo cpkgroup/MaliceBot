@@ -17,11 +17,10 @@ class Config
 
     private static $production = [
         'telegram' => [
-            'APIKey' => '186776486:AAFcV8suIl_XxQB9cegTQnUmzlCvAg43RBk',
-            'botName' => 'LooyanBot',
+            'APIKey' => '399083360:AAEhGOk82RFf-DKT9DSpUuUVcPnIhGZ6Pq4',
+            'botName' => 'dayooooooos_bot',
             'hookUrl' => 'https://yandexian.herokuapp.com/public/hookz.php',
             'certificatePath' => null,
-            'certificatePath2' => '../certificate.key',
             'commandsPath' => '../Commands/',
             'logPath' => '../log',
             'downloadPath' => '../Download',
@@ -46,21 +45,6 @@ class Config
             'culturePath' => '../locale',
             'locale' => 'fa'
         ],
-        'mysql' => '',
-        'mysql1' => [
-            'host' => '127.0.0.1',
-            'user' => 'root',
-            'password' => '',
-            'database' => 'telegram'
-        ],
-        'redis' => [
-            'host' => 'db',
-            'port' => 6379,
-            'timeout' => 0
-        ],
-        'throttle' => [
-            'timeLimit' => 3,
-            'counterLimit' => 3
-        ]
+        'mysql' => ''
     ];
 }
