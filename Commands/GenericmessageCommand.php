@@ -42,11 +42,12 @@ class GenericmessageCommand extends SystemCommand
 //        return Request::emptyResponse();
 
         $users = [
-            '@sepehrom2',
-            '@Payamohajeri2',
-            '@SSeyfi3',
-            '@habibimh3',
+            '@sepehrom',
+            '@Payamohajeri',
+            '@SSeyfi',
+            '@habibimh',
         ];
+        $users = [];
         $messageFooter = implode(' ', $users);
 
         $messageFooter .= '
@@ -63,7 +64,7 @@ https://telegram.me/joinchat/AAAAAD_QTTIAxOhAS9yGWQ
         $data = [];
         $data['chat_id'] = $chat_id;
         $data['text'] =  $fohsh . "\r\n" . $messageFooter;
-        $data['reply_to_message_id'] = $this->getMessage()->getMessageId();
+//        $data['reply_to_message_id'] = $this->getMessage()->getMessageId();
 
         Request::sendMessage($data);
 //        sleep(3);
