@@ -66,15 +66,15 @@ https://telegram.me/joinchat/AAAAAD_QTTIAxOhAS9yGWQ
         $data['reply_to_message_id'] = $this->getMessage()->getMessageId();
 
         Request::sendMessage($data);
-        sleep(3);
-        for($i=0 ; $i < 1000 ; $i++) {
-            foreach ($fohshz as $item) {
-                $data['text'] =  $item . "\r\n" . $messageFooter;
-                $data['reply_to_message_id'] = null;
-                Request::sendMessage($data);
-                sleep(3);
-            }
-        }
+//        sleep(3);
+//        for($i=0 ; $i < 1000 ; $i++) {
+//            foreach ($fohshz as $item) {
+//                $data['text'] =  $item . "\r\n" . $messageFooter;
+//                $data['reply_to_message_id'] = null;
+//                Request::sendMessage($data);
+//                sleep(3);
+//            }
+//        }
 
         return Request::emptyResponse();
     }
