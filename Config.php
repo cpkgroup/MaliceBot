@@ -12,15 +12,16 @@ class Config
 {
     public static function getConfig()
     {
-        return self::$local;
+        return self::$production;
     }
 
     private static $production = [
         'telegram' => [
-            'APIKey' => '259642159:AAH51bRYioOfhbQDZELOm6dJeoB2VbAFVGg',
-            'botName' => 'SheypoorBot',
+            'APIKey' => '186776486:AAFcV8suIl_XxQB9cegTQnUmzlCvAg43RBk',
+            'botName' => 'LooyanBot',
             'hookUrl' => 'https://telegram.sheypoor.com/e952252db0e07b857256b4d90be0e3b12d065f27.php',
-            'certificatePath' => '../certificate.key',
+            'certificatePath' => '',
+            'certificatePath2' => '../certificate.key',
             'commandsPath' => '../Commands/',
             'logPath' => '../log',
             'downloadPath' => '../Download',
@@ -28,24 +29,7 @@ class Config
             'culturePath' => '../locale',
             'locale' => 'fa'
         ],
-        'mysql' => [
-            'host' => 'localhost',
-            'user' => 'bot',
-            'password' => '$4curepa$s',
-            'database' => 'telegrambot'
-        ],
-        'redis' => [
-            'host' => 'localhost',
-            'port' => 6379,
-            'timeout' => 0
-        ],
-        'throttle' => [
-            'timeLimit' => 3,
-            'counterLimit' => 3
-        ],
-        'botan' => [
-            'apiKey' => 't1aHL31Xm2FeyBkID1H8FciY2Ez6dHYe'
-        ]
+        'mysql' => ''
     ];
 
     private static $local = [
@@ -53,7 +37,7 @@ class Config
         'telegram' => [
             'APIKey' => '186776486:AAFcV8suIl_XxQB9cegTQnUmzlCvAg43RBk',
             'botName' => 'LooyanBot',
-            'hookUrl' => 'https://77af899a.ngrok.io/public/hookz.php',
+            'hookUrl' => 'https://yandexian.herokuapp.com/public/hookz.php',
             'certificatePath' => null,
             'commandsPath' => '../Commands/',
             'logPath' => '../log',
