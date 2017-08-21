@@ -1,0 +1,26 @@
+---
+- name: PHP packages
+  apt: name={{ item }} state=installed
+  with_items:
+    - php5-cli
+    - php5-dev
+    - php5-mysql
+    - php5-redis
+    - php5-fpm
+    - php5-curl
+  register: php_installed
+  tags: ['php']
+
+- name: Copy php cli conf
+  template:
+    src: php-cli.ini
+    dest: /etc/php5/cli/php.ini
+
+- name: copy install php composer script
+  template:
+    src: composer.sh
+    dest: /tmp/composer.sh
+    mode: 0700
+
+- name: execute install php composer script
+  shell: /tmp/composer.sh chdir=/www/

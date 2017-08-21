@@ -1,0 +1,5 @@
+ALTER TABLE `telegram`.`user`
+ADD COLUMN `token` VARCHAR(255),
+ADD COLUMN `email` VARCHAR(40),
+ADD COLUMN `mobile` VARCHAR(20),
+ADD COLUMN `apiUserId` INT;

@@ -1,0 +1,33 @@
+Category-Separator: ›
+Location-Separator: ›
+Please-Submit-Value-For-Attribute: Please *:submit* *:label*
+Listing-Submit-Successfully: |
+  Your listing sent successfully
+
+  To activate click: :linkActivateIP
+
+
+  Listing link: :link
+  Listing code: :code
+  (after admin confirm will be available)
+Listing-Submit-Failed: |
+  An error has occurred in the registration listing:
+  :error
+  Please try again later
+Change-Region-From: Change region - :region
+Search-Result-Message: |
+  Number results: :totalCount , page :page from :allPages
+Channel-Icon: 🆑
+Bot-Icon: 🆔
+Sheypoor-Channel: Sheypoor
+Listing-Details-Not-Found: |
+  Listing id: ":listingId" not found, because of:
+  1. The listing is waiting for administrator approval.
+  2. The listing is removed or has expired.
+  3. The listing code you entered is incorrect.
+Use-Old-Location: |
+  Use your old location: :location
+Comma: ,
+Success-Message: |
+  ✅ *:msg*
+  .

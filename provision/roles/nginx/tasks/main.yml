@@ -1,0 +1,38 @@
+---
+
+- name: nginx stable repository
+  apt_repository: repo='ppa:nginx/stable'
+
+- name: nginx packages
+  apt: name={{ item }} update_cache=yes state=installed
+  with_items:
+    - nginx
+    - nginx-extras
+  register: nginx_installed
+  tags: ['nginx']
+
+- name: enable default site
+  template:
+    src: default
+    dest: /etc/nginx/sites-available/default
+
+- name: copy nginx config
+  template:
+    src: nginx.conf
+    dest: /etc/nginx/nginx.conf
+
+- name: Creates nginx ssl directory
+  file: path=/etc/nginx/ssl state=directory
+
+- name: Creates nginx ssl directory
+  file: path=/www state=directory
+
+- name: copy ssl key
+  template:
+    src: ssl/private.key
+    dest: /etc/nginx/ssl/private.key
+
+- name: copy ssl certificate
+  template:
+    src: ssl/public.pem
+    dest: /etc/nginx/ssl/public.pem

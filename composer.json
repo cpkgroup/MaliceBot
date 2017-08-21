@@ -1,0 +1,11 @@
+{
+  "require": {
+    "longman/telegram-bot": "^0.35.0",
+    "symfony/yaml": "^3.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Trumpet\\TelegramBot\\": "./"
+    }
+  }
+}

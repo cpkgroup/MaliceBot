@@ -1,0 +1,22 @@
+---
+- name: redis-server packages
+  apt: name={{ item }} state=installed
+  with_items:
+    - redis-server
+  register: redis_installed
+- name: redis.conf
+  template:
+    src: redis.j2
+    dest: /etc/redis/redis.conf
+    owner: root
+    group: root
+    mode: 0644
+  notify: restart redis-server
+- name: enable redis-server
+  service: name=redis-server enabled=yes
+# service start does not work well inside docker container
+- name: start redis-server
+  command: /etc/init.d/redis-server start
+  when: redis_installed.changed
+- name: delay while starting redis-server
+  wait_for: host=localhost port={{ redis_port }} delay=1

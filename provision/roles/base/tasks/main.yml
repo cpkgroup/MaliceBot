@@ -1,0 +1,9 @@
+---
+- name: base packages
+  apt: name={{ item }} state=installed
+  with_items:
+    - rsync
+    - htop
+    - vim
+    - git
+  tags: ['base']
