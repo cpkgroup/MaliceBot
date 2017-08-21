@@ -5,6 +5,6 @@
  * Date: 8/13/16
  * Time: 11:56 AM
  */
-echo "Hi";
+echo "Welcome to my APP";
 echo "<br>";
 echo $_SERVER['REMOTE_ADDR'];
