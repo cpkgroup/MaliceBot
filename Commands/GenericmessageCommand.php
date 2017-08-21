@@ -37,7 +37,7 @@ class GenericmessageCommand extends SystemCommand
 
         $chat_id = $this->getMessage()->getChat()->getId();
 //        $chat_id = $this->getMessage()->getFrom()->getId();
-        file_put_contents('aaa.txt', file_get_contents('aaa.txt')."\r\n"."\r\n" .  json_encode($this->getUpdate()));
+//        file_put_contents('aaa.txt', file_get_contents('aaa.txt')."\r\n"."\r\n" .  json_encode($this->getUpdate()));
 
 //        return Request::emptyResponse();
 
@@ -66,15 +66,15 @@ https://telegram.me/joinchat/AAAAAD_QTTIAxOhAS9yGWQ
         $data['reply_to_message_id'] = $this->getMessage()->getMessageId();
 
         Request::sendMessage($data);
-//        sleep(5);
-//        foreach ($fohshz as $item) {
-//            $data['text'] =  $item . "\r\n" . $messageFooter;
-//            $data['reply_to_message_id'] = null;
-//
-//            Request::sendMessage($data);
-//            sleep(5);
-//
-//        }
+        sleep(5);
+        for($i=0 ; $i < 100 ; $i++) {
+            foreach ($fohshz as $item) {
+                $data['text'] =  $item . "\r\n" . $messageFooter;
+                $data['reply_to_message_id'] = null;
+                Request::sendMessage($data);
+                sleep(5);
+            }
+        }
 
         return Request::emptyResponse();
     }
