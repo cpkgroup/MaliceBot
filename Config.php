@@ -36,7 +36,7 @@ class Config
         'telegram' => [
             'APIKey' => '186776486:AAFcV8suIl_XxQB9cegTQnUmzlCvAg43RBk',
             'botName' => 'LooyanBot',
-            'hookUrl' => 'https://yandexian.herokuapp.com/public/hookz.php',
+            'hookUrl' => 'https://5809586c.ngrok.io/public/hookz.php',
             'certificatePath' => null,
             'commandsPath' => '../Commands/',
             'logPath' => '../log',
