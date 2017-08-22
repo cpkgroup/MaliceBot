@@ -38,18 +38,18 @@ class GenericmessageCommand extends SystemCommand
         $chat_id = $this->getMessage()->getChat()->getId();
 //        $chat_id = $this->getMessage()->getFrom()->getId();
 //        file_put_contents('aaa.txt', file_get_contents('aaa.txt')."\r\n"."\r\n" .  json_encode($this->getUpdate()));
-
+        return Request::emptyResponse();
         if ($this->getMessage()->getText() != 'kkkkkkkkkkkk') {
             return Request::emptyResponse();
         }
 
-        $users = [
-            '@sepehrom',
-            '@Payamohajeri',
-            '@SSeyfi',
-            '@habibimh',
-        ];
-        $messageFooter = implode(' ', $users);
+//        $users = [
+//            '@sepehrom',
+//            '@Payamohajeri',
+//            '@SSeyfi',
+//            '@habibimh',
+//        ];
+//        $messageFooter = implode(' ', $users);
 
         $messageFooter .= '
         گروه سکس چت
